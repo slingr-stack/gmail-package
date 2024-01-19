@@ -7,6 +7,11 @@
             "name": "http",
             "version": "v1.3.7",
             "instanceId": "shared"
+        },
+        {
+            "type": "package",
+            "name": "oauth",
+            "version": "v1.0.20"
         }
     ],
     "configurationBuilder": "/configurationBuilder.js",
@@ -26,6 +31,13 @@
             "label": "Client Secret",
             "name": "clientSecret",
             "type": "text"
+        },
+        {
+            "name": "oauthCallback",
+            "label": "OAuth callback",
+            "description": "The OAuth callback to configure in your Gmail App",
+            "type": "label",
+            "value": "config.AUTH_CALLBACK_URL+'/authCallback'"
         },
         {
             "name": "webhooksUrl",

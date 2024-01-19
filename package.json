@@ -11,12 +11,6 @@
     ],
     "configuration": [
         {
-            "label": "Configuration id",
-            "description": "Id used to store tokens",
-            "name": "id",
-            "type": "text"
-        },
-        {
             "label": "Client Id",
             "name": "clientId",
             "type": "text"

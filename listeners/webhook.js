@@ -18,7 +18,7 @@ listeners.defaultWebhookGmail = {
         var params = event.data.parameters;
         if(true) {
             sys.logs.info('Valid webhook received. Triggering event.');
-            sys.events.triggerEvent('Gmail:webhook', {
+            sys.events.triggerEvent('gmail:webhook', {
                 body: body,
                 params: params
             });

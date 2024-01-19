@@ -5,11 +5,23 @@
         {
             "type": "service",
             "name": "http",
-            "version": "v1.3.7",
+            "version": "~v1.3.7",
             "instanceId": "shared"
+        },
+        {
+            "type": "package",
+            "name": "oauth",
+            "version": "~v1.0.20"
         }
     ],
+    "configurationBuilder": "/configurationBuilder.js",
     "configuration": [
+        {
+            "label": "Configuration id",
+            "description": "Id used to store tokens",
+            "name": "id",
+            "type": "text"
+        },
         {
             "label": "Client Id",
             "name": "clientId",
@@ -19,6 +31,20 @@
             "label": "Client Secret",
             "name": "clientSecret",
             "type": "text"
+        },
+        {
+            "name": "oauthCallback",
+            "label": "OAuth callback",
+            "description": "The OAuth callback to configure in your Gmail App",
+            "type": "label",
+            "value": "config.AUTH_CALLBACK_URL+'/authCallback'"
+        },
+        {
+            "name": "webhooksUrl",
+            "label": "Webhooks URL",
+            "description": "The URL to configure in webhooks of your Gmail App",
+            "type": "label",
+            "value": "config.WEBHOOK_URL"
         },
         {
             "name": "GMAIL_API_BASE_URL",
@@ -44,6 +70,11 @@
             "type": "script",
             "namespace": "api",
             "path": "/scripts/api.js"
+        },
+        {
+            "type": "listener",
+            "namespace": "listeners",
+            "path": "/listeners/listeners.js"
         },
         {
             "type": "flowStep",

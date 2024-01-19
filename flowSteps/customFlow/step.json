@@ -1,8 +1,8 @@
 {
-  "label": "API call to skeleton",
+  "label": "API call to Gmail",
   "name": "customFlow",
   "category": "integrations",
-  "description": "This flow step will send generic request to skeleton",
+  "description": "This flow step will send generic request to Gmail",
   "inputs": [
     {
       "label": "Url",

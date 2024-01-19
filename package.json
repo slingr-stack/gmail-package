@@ -1,75 +1,88 @@
 {
-    "name": "skeleton",
-    "label": "Skeleton Package",
+    "name": "gmail",
+    "label": "Gmail Package",
     "dependencies": [
         {
             "type": "service",
             "name": "http",
-            "version": "v1.3.7",
+            "version": "~v1.2.6",
             "instanceId": "shared"
         },
         {
             "type": "package",
             "name": "oauth",
-            "version": "v1.0.19"
+            "version": "~v1.0.19"
         }
     ],
     "configurationBuilder": "/configurationBuilder.js",
     "configuration": [
         {
-            "name": "SKELETON_API_BASE_URL",
-            "label": "Skeleton Api Url",
+            "label": "Configuration id",
+            "description": "Id used to store tokens",
+            "name": "id",
+            "type": "text"
+        },
+        {
+            "label": "Auth URL",
+            "name": "authUrl",
+            "type": "text"
+        },
+        {
+            "label": "Access Token URL",
+            "name": "accessTokenUrl",
+            "type": "text"
+        },
+        {
+            "label": "Client Id",
+            "name": "clientId",
+            "type": "text"
+        },
+        {
+            "label": "Client Secret",
+            "name": "clientSecret",
+            "type": "text"
+        },
+        {
+            "label": "Scope",
+            "name": "scope",
+            "type": "text"
+        },
+        {
+            "label": "State",
+            "name": "state",
+            "type": "text"
+        },
+        {
+            "name": "oauthCallback",
+            "label": "OAuth callback",
+            "description": "The OAuth callback to configure in your GitHub App",
             "type": "label",
-            "value": "https://example.com/"
+            "value": "config.AUTH_CALLBACK_URL+'/authCallback'"
         },
         {
-            "name": "choice",
-            "label": "Choice",
-            "required": false,
-            "defaultValue": "true",
-            "type": "buttonsGroup",
-            "typeOptions": {
-                "allowCustom": true,
-                "possibleValues": [
-                    {
-                        "label": "True",
-                        "name": "true"
-                    },
-                    {
-                        "label": "False",
-                        "name": "false"
-                    },
-                    {
-                        "label": "Other",
-                        "name": "other"
-                    }
-                ]
-            }
-        },
-        {
-            "name": "text",
-            "label": "Text",
-            "type": "text",
-            "required": "false",
-            "visibility": "config.choice == 'true'"
-        },
-        {
-            "name": "info",
-            "label": "info",
+            "name": "webhooksUrl",
+            "label": "Webhooks URL",
+            "description": "The URL to configure in webhooks of your GitHub App",
             "type": "label",
-            "value": "'info'"
+            "value": "@config.WEBHOOK_URL"
+        },
+        {
+            "name": "GMAIL_API_BASE_URL",
+            "label": "Gmail Api Url",
+            "type": "label",
+            "value": "https://graph.microsoft.com"
         }
     ],
     "events": [
         {
             "label": "Webhook",
             "name": "webhook",
-            "description": "Event triggered when there is a webhook coming from PandaDoc."
+            "description": "Happens when Gmail sends a webhook to the package."
         },
         {
-            "label": "Callback",
-            "name": "callback",
-            "description": "Happens when a async process is finished"
+            "label": "User connected to gmail",
+            "name": "userConnected",
+            "description": "Happens when a user successfully connects to Gmail ."
         }
     ],
     "metadata": [
@@ -80,23 +93,13 @@
         },
         {
             "type": "listener",
-            "namespace": "webhook",
-            "path": "/listeners/webhook.js"
+            "namespace": "listeners",
+            "path": "/listeners/listeners.js"
         },
         {
             "type": "flowStep",
-            "namespace": "apiCallSkeleton",
-            "path": "/flowSteps/apiCallSkeleton"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "customFlow",
-            "path": "/flowSteps/customFlow"
-        },
-        {
-            "type": "uiService",
-            "namespace": "testUiService",
-            "path": "/uiServices/testUiService"
+            "namespace": "apiCallGmail",
+            "path": "/flowSteps/apiCallGmail"
         }
     ]
 }

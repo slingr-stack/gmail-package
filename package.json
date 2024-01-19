@@ -14,7 +14,6 @@
             "version": "v1.0.20"
         }
     ],
-    "configurationBuilder": "/configurationBuilder.js",
     "configuration": [
         {
             "label": "Configuration id",
@@ -50,7 +49,7 @@
             "name": "GMAIL_API_BASE_URL",
             "label": "Gmail Api Url",
             "type": "label",
-            "value": "https://graph.microsoft.com"
+            "value": "https://gmail.googleapis.com/gmail/v1"
         }
     ],
     "events": [

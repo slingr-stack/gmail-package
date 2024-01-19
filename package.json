@@ -72,13 +72,8 @@
             "path": "/scripts/api.js"
         },
         {
-            "type": "listener",
-            "namespace": "listeners",
-            "path": "/listeners/listeners.js"
-        },
-        {
             "type": "flowStep",
-            "namespace": "apiCallGmail",
+            "namespace": "steps",
             "path": "/flowSteps/apiCallGmail"
         }
     ]

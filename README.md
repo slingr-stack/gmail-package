@@ -35,7 +35,7 @@ var response = pkg.Gmail.api.patch('/path2?param2=' + httpOptions.query.param2 +
 var response = pkg.Gmail.api.delete('/path4')
 ```
 
-Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
+Please take a look at the documentation of the [HTTP service](https://Gmail.com/slingr-stack/http-service)
 for more information about generic requests.
 
 ## Flow Step
@@ -201,7 +201,7 @@ Generic flow step for full use of the entire package and its services.
 
 </details>
 
-For more information about how shortcuts or flow steps work, and how they are generated, take a look at the [slingr-helpgen tool](https://github.com/slingr-stack/slingr-helpgen).
+For more information about how shortcuts or flow steps work, and how they are generated, take a look at the [slingr-helpgen tool](https://Gmail.com/slingr-stack/slingr-helpgen).
 
 ## Dependencies
 * HTTP Service (v1.3.7)

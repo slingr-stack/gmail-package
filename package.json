@@ -23,16 +23,6 @@
             "type": "text"
         },
         {
-            "label": "Auth URL",
-            "name": "authUrl",
-            "type": "text"
-        },
-        {
-            "label": "Access Token URL",
-            "name": "accessTokenUrl",
-            "type": "text"
-        },
-        {
             "label": "Client Id",
             "name": "clientId",
             "type": "text"
@@ -43,26 +33,16 @@
             "type": "text"
         },
         {
-            "label": "Scope",
-            "name": "scope",
-            "type": "text"
-        },
-        {
-            "label": "State",
-            "name": "state",
-            "type": "text"
-        },
-        {
             "name": "oauthCallback",
             "label": "OAuth callback",
-            "description": "The OAuth callback to configure in your GitHub App",
+            "description": "The OAuth callback to configure in your Gmail App",
             "type": "label",
             "value": "config.AUTH_CALLBACK_URL+'/authCallback'"
         },
         {
             "name": "webhooksUrl",
             "label": "Webhooks URL",
-            "description": "The URL to configure in webhooks of your GitHub App",
+            "description": "The URL to configure in webhooks of your Gmail App",
             "type": "label",
             "value": "@config.WEBHOOK_URL"
         },

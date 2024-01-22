@@ -5,13 +5,13 @@
         {
             "type": "service",
             "name": "http",
-            "version": "~v1.3.7",
+            "version": "v1.3.7",
             "instanceId": "shared"
         },
         {
             "type": "package",
             "name": "oauth",
-            "version": "~v1.0.20"
+            "version": "v1.0.24"
         }
     ],
     "configurationBuilder": "/configurationBuilder.js",
@@ -30,6 +30,16 @@
         {
             "label": "Client Secret",
             "name": "clientSecret",
+            "type": "text"
+        },
+        {
+            "label": "Scope",
+            "name": "scope",
+            "type": "text"
+        },
+        {
+            "label": "State",
+            "name": "state",
             "type": "text"
         },
         {
@@ -78,7 +88,7 @@
         },
         {
             "type": "flowStep",
-            "namespace": "steps",
+            "namespace": "apiCallGmail",
             "path": "/flowSteps/apiCallGmail"
         }
     ]

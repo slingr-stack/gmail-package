@@ -12,7 +12,7 @@ let configurationBuilder = function (config) {
         accessTokenUrl: 'https://oauth2.googleapis.com/token',
         clientId: config.clientId,
         clientSecret: config.clientSecret,
-        scope: 'https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly',
+        scope: config.scope,
         state: config.state,
         oauthCallback: config.oauthCallback
 	};

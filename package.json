@@ -25,21 +25,28 @@
         {
             "label": "Client Id",
             "name": "clientId",
+            "description": "The ID for your client application registered with the API provider.",
+            "required": "true",
             "type": "text"
         },
         {
             "label": "Client Secret",
             "name": "clientSecret",
+            "description": " The client secret given to you by the API provider.",
+            "required": "true",
             "type": "text"
         },
         {
             "label": "Scope",
             "name": "scope",
+            "description": " The scope of access you are requesting, which may include multiple space-separated values.",
+            "required": "true",
             "type": "text"
         },
         {
             "label": "State",
             "name": "state",
+            "description": "An opaque value to prevent cross-site request forgery.",
             "type": "text"
         },
         {

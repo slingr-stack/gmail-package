@@ -35,13 +35,13 @@ var response = pkg.gmail.api.patch('/path2?param2=' + httpOptions.query.param2 +
 var response = pkg.gmail.api.delete('/path4')
 ```
 
-
+#### Example
 ```javascript
 var email='example@gmail.com';
 log(JSON.stringify(pkg.gmail.api.get('/users/'+email+'/profile')));
 ```
 
-Please take a look at the documentation of the [HTTP service](https://Gmail.com/slingr-stack/http-service)
+Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service?tab=readme-ov-file#overview)
 for more information about generic requests.
 
 ## Flow Step

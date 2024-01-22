@@ -140,7 +140,7 @@ function setAuthorization(options) {
 
 	authorization = mergeJSON(authorization, {
 		type: "oauth2",
-		accessToken: sys.storage.get(pkgConfig.id + ' - access_token',{decrypt:true}),
+		accessToken: sys.storage.get('installationInfo-Gmail-User-'+sys.context.getCurrentUserRecord().id() + ' - access_token',{decrypt:true}),
 		headerPrefix: "Bearer"
 	});
 	options.authorization = authorization;

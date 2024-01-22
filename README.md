@@ -9,7 +9,7 @@
     <tbody>
     <tr>
         <td>Gmail package</td>
-        <td>January 3, 2024</td>
+        <td>January 22, 2024</td>
         <td>Detailed description of the API of the Gmail package.</td>
     </tr>
     </tbody>
@@ -25,14 +25,20 @@ The Javascript API of the Gmail package has two pieces:
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [Gmail API](API_URL_HERE) like this:
+You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [Gmail API](https://developers.google.com/gmail/api/guides) like this:
 ```javascript
-var response = pkg.Gmail.api.get('/path3')
-var response = pkg.Gmail.api.put('/path1/:testPath', body)
-var response = pkg.Gmail.api.put('/path1/:testPath')
-var response = pkg.Gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
-var response = pkg.Gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
-var response = pkg.Gmail.api.delete('/path4')
+var response = pkg.gmail.api.get('/path3')
+var response = pkg.gmail.api.put('/path1/:testPath', body)
+var response = pkg.gmail.api.put('/path1/:testPath')
+var response = pkg.gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
+var response = pkg.gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
+var response = pkg.gmail.api.delete('/path4')
+```
+
+
+```javascript
+var email='example@gmail.com';
+log(JSON.stringify(pkg.gmail.api.get('/users/'+email+'/profile')));
 ```
 
 Please take a look at the documentation of the [HTTP service](https://Gmail.com/slingr-stack/http-service)
@@ -205,7 +211,7 @@ For more information about how shortcuts or flow steps work, and how they are ge
 
 ## Dependencies
 * HTTP Service (v1.3.7)
-* Oauth Package (v1.0.19) // TODO review and remove if its needed
+* Oauth Package (v1.0.24)
 
 ## About SLINGR
 

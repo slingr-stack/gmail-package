@@ -32,14 +32,14 @@
         {
             "label": "Client Secret",
             "name": "clientSecret",
-            "description": " The client secret given to you by the API provider.",
+            "description": "The client secret given to you by the API provider",
             "required": "true",
             "type": "text"
         },
         {
             "label": "Scope",
             "name": "scope",
-            "description": " The scope of access you are requesting, which may include multiple space-separated values.",
+            "description": "The scope of access you are requesting, which may include multiple space-separated values.",
             "required": "true",
             "type": "text"
         },

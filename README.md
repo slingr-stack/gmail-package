@@ -27,12 +27,10 @@ The Javascript API of the Gmail package has two pieces:
 ## HTTP requests
 You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [Gmail API](https://developers.google.com/gmail/api/guides) like this:
 ```javascript
-var response = pkg.gmail.api.get('/path3')
-var response = pkg.gmail.api.put('/path1/:testPath', body)
-var response = pkg.gmail.api.put('/path1/:testPath')
-var response = pkg.gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
-var response = pkg.gmail.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
-var response = pkg.gmail.api.delete('/path4')
+var response = pkg.gmail.api.get('/users/:userId/messages')
+var response = pkg.gmail.api.put('/users/:userId/messages/send', body)
+var response = pkg.gmail.api.put('/users/:userId/settings/language', body)
+var response = pkg.gmail.api.delete('/users/:userId/messages/:id')
 ```
 
 #### Example

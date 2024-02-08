@@ -9,7 +9,7 @@ listeners.defaultWebhookGmail = {
         service: 'http',
         event: 'webhook',
         matching: {
-            path: '/Gmail',
+            path: '/gmail',
         }
     },
     callback: function(event) {

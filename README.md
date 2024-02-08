@@ -9,7 +9,7 @@
     <tbody>
     <tr>
         <td>Gmail package</td>
-        <td>January 22, 2024</td>
+        <td>February 8, 2024</td>
         <td>Detailed description of the API of the Gmail package.</td>
     </tr>
     </tbody>
@@ -208,7 +208,7 @@ Generic flow step for full use of the entire package and its services.
 For more information about how shortcuts or flow steps work, and how they are generated, take a look at the [slingr-helpgen tool](https://Gmail.com/slingr-stack/slingr-helpgen).
 
 ## Dependencies
-* HTTP Service (v1.3.7)
+* HTTP Service (v1.4.0)
 * Oauth Package (v1.0.24)
 
 ## About SLINGR
